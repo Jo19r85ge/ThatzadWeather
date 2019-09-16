@@ -1,0 +1,72 @@
+<style>
+
+    input
+    {
+        border-radius: 6px;
+        margin-top: 5px;
+        padding: 6px;
+        border: 0px;
+    }
+
+    .mylabel
+    {
+        font-family: 'Lato', sans-serif;
+        color:white;
+    }
+
+    .column  
+    {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: 200px; 
+    }
+
+    .row:after 
+    {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media screen and (max-width: 600px) 
+    {
+        .column 
+        {
+            width: 100%;
+        }
+    }
+
+</style>
+
+<div ng-hide="showme">
+    <h1>ThatzWeather</h1> <br>
+    <h5>Enterate del tiempo en la zona exacta que te interesa buscando por codigo postal.</h5> <br>
+    
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <label class="mylabel">Codigo Postal </label>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="text-center" placeholder="Inserte su codigo postal..." id="Codigo"/>
+        </div>
+        <button type="button" class="btn btn-outline-light" ng-click="vm.ShowConsult(); showme=true;">Buscar Ciudad</button>
+    </form>
+</div>
+
+<div class="row" ng-show="showme">
+    <div class="column">
+        <h2>Ahora</h2>
+        <span style="color:white; font-family: 'Lato', sans-serif;">{{vm.Now}}</span><br />
+        <img ng-src="{{vm.Icono}}" style="width:80px; height: 90px;"></p>
+    </div>
+    <div class="column">
+        <h2>Próximas horas</h2>
+        <span style="color:white; font-family: 'Lato', sans-serif;">{{vm.Next}} <br> {{vm.Next1}} <br> {{vm.Next2}}</span><br />    
+    </div>
+    <div class="column">
+        <h2>Próximos 5 días</h2>
+        <p>Some text..</p>
+    </div>
+    <button type="button" class="btn btn-outline-light" ng-click="vm.ShowConsult(); showme=false;"> Buscar otra ciudad </button>
+</div>
