@@ -31,29 +31,12 @@ class StartViewModel
                 this.Now = jsonNowCiudad + " Temperatura: " + jsonNowTemperatura + "º"; 
                 this.Icono = "http://openweathermap.org/img/wn/" + jsonNowIcono + ".png";
 
-
-
-
                 this.Next = response.data.list[0].dt_txt;
                 this.Next1 = response.data.list[1].dt_txt;
                 this.Next2 = response.data.list[2].dt_txt;
 
-                // for (let i = 0; i < jsonNextHours.length; i++) 
-                // {
-                //     var kkk = jsonNextHours;
-                //     kkk.length = 3;
-                //     this.Next = kkk[i].dt_txt;
-                //   console.log(kkk[i].dt_txt);
-                // }
-
-
-                // this.Next = jsonNextHours;
-
-                // console.log(jsonNextHours);
             });
     }
-
-    
 }
 
 app.component('start',
@@ -62,8 +45,3 @@ app.component('start',
     controller: StartViewModel,
     controllerAs: "vm"
 });
-
-                // var jsonHumedad = response.data.main.humidity;
-
-                // this.Weather = jsonCiudad + " Temperatura: " + jsonTemperatura + "º" + " Humedad: " + jsonHumedad + "%";
-                // this.Icono = "http://openweathermap.org/img/w/" + jsonIcono + ".png";
