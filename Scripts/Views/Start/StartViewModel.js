@@ -9,7 +9,6 @@ class StartViewModel
         this.Next = [];
         this.Next1 = [];
         this.Next2 = [];
-
         this.NextDays = [];
     }
 
