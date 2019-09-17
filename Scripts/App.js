@@ -1,6 +1,6 @@
 var app = angular.module('ThatzWeather', ['ngAnimate', 'ngRoute', 'ui.bootstrap']);
 
-app.config(function ($routeProvider, $locationProvider) 
+app.config(function ($routeProvider, $locationProvider, $qProvider) 
 {
     $routeProvider.when('/consult',
         {
@@ -18,4 +18,7 @@ app.config(function ($routeProvider, $locationProvider)
     });
         
     $locationProvider.html5Mode(true);
+    $qProvider.errorOnUnhandledRejections(false);
 });
+
+
