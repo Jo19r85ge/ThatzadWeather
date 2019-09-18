@@ -20,7 +20,7 @@ class StartViewModel
 
     GetAllWeather(cp)
     {
-        this.Http.get("http://api.openweathermap.org/data/2.5/forecast?zip="+cp+",es&APPID=afa5b2905c2ddefa898b50054a2e7584")
+        this.Http.get("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?zip="+cp+",es&APPID=afa5b2905c2ddefa898b50054a2e7584")
             .then((response) =>
             {
                 var jsonNowCiudad = response.data.city.name;
@@ -28,7 +28,7 @@ class StartViewModel
                 var jsonNowIcono = response.data.list[0].weather[0].icon;
 
                 this.Now = jsonNowCiudad + " Temperatura: " + jsonNowTemperatura + "º"; 
-                this.Icono = "http://openweathermap.org/img/wn/" + jsonNowIcono + ".png";
+                this.Icono = "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/" + jsonNowIcono + ".png";
 
                 this.Next = response.data.list[0].dt_txt;
                 this.Next1 = response.data.list[1].dt_txt;

@@ -4,7 +4,6 @@ class BackgroundViewModel
     {
 
     }
-
 }
 
 app.component('background',
