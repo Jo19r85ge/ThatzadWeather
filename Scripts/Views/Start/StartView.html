@@ -55,18 +55,22 @@
 </div>
 
 <div class="row" ng-show="showme">
+
     <div class="column">
         <h2>Ahora</h2>
         <span style="color:white; font-family: 'Lato', sans-serif;">{{vm.Now}}</span><br />
         <img ng-src="{{vm.Icono}}" style="width:80px; height: 90px;"></p>
     </div>
+
     <div class="column">
         <h2>Próximas horas</h2>
         <span style="color:white; font-family: 'Lato', sans-serif;">{{vm.Next}} <br> {{vm.Next1}} <br> {{vm.Next2}}</span><br />    
     </div>
+
     <div class="column">
         <h2>Próximos 5 días</h2>
         <p>Some text..</p>
     </div>
+    
     <button type="button" class="btn btn-outline-light" ng-click="vm.ShowConsult(); showme=false;"> Buscar otra ciudad </button>
 </div>
