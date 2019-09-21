@@ -1,6 +1,5 @@
 class StartViewModel
 {
-    
     constructor($http, $window)
     {
         this.Http = $http;
