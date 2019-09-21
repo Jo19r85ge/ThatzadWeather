@@ -33,7 +33,6 @@ class StartViewModel
                 this.Next = response.data.list[0].dt_txt;
                 this.Next1 = response.data.list[1].dt_txt;
                 this.Next2 = response.data.list[2].dt_txt;
-
             });
     }
 }
